@@ -23,7 +23,6 @@ void Fitxa::mostra() const
 	if (a_valor <= 9) cout << 0;
 	cout << a_valor << ")";
 }
-
 // METODES MODIFICADORS
 void Fitxa::llegeix()
 {

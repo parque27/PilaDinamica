@@ -14,7 +14,7 @@ public:
 	// METODES CONSULTORS
 	void mostra() const;
 	// Pre: --: Post: mostra la fitxa per pantalla
-
+	
 	// METODES MODIFICADORS
 	void llegeix();
 	// Pre: --; Post: llegeix els atributs de la fitxa per teclat
