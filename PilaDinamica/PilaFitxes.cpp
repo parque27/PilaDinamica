@@ -11,8 +11,8 @@ PilaFitxes::PilaFitxes()
 // CONSTRUCTOR COPIA
 PilaFitxes::PilaFitxes(const PilaFitxes& o)
 {
-	a_cim = NULL;
-	copia(o);
+	a_cim = NULL; // Abans de copiar res, posem el cim a NULL
+	copia(o); // Ara ho copiem (veure impl. del metode)
 }
 // DESTRUCTOR
 PilaFitxes::~PilaFitxes()
@@ -56,4 +56,39 @@ void PilaFitxes::desempila()
 	Node* aux = a_cim;
 	a_cim = a_cim->seg;
 	delete aux;
+}
+
+// METODES D'INSTANCIA
+void PilaFitxes::allibera()
+{
+	while (not es_buida())
+	{
+		Node* aux = a_cim;
+		a_cim = a_cim->seg;
+		delete aux;
+	}
+}
+
+void PilaFitxes::copia(const PilaFitxes& o)
+{
+	if (not o.es_buida())
+	{
+		Node* p, * q, * aux;
+		p = new Node;
+		a_cim = p;
+		aux = o.a_cim;
+		p->f = aux->f;
+		p->seg = NULL;
+		q = p;
+		aux = aux->seg;
+		while (aux != NULL)
+		{
+			p = new Node;
+			q->seg = p;
+			p->f = aux->f;
+			p->seg = NULL;
+			q = p;
+			aux = aux->seg;
+		}
+	}
 }
