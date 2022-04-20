@@ -44,11 +44,10 @@ Fitxa PilaFitxes::cim() const
 // METODES MODIFICADRS
 void PilaFitxes::empila(Fitxa fitxa)
 {
-	Node* nou = new Node; // reservem memoria "virtual"
+	Node* nou = new Node; // reservem memoria "virtual"?
 	nou->f = fitxa; // la fitxa f apuntada per nou = fitxa a empilar
 	nou->seg = a_cim; // el node seg de nou apunta al mateix lloc que a_cim (NULL en el n=1 cas, a_cim en n=2,3...)
 	a_cim = nou; // a_cim apunta al mateix lloc que apunta nou (es a dir al nou node que volem empilar)
-	// un cop finalitzem, nou desapareix del mon virtual
 }
 
 void PilaFitxes::desempila()
