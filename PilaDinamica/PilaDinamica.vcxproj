@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fitxa.cpp" />
     <ClCompile Include="PilaDinamica.cpp" />
+    <ClCompile Include="PilaFitxes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fitxa.h" />
+    <ClInclude Include="PilaFitxes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

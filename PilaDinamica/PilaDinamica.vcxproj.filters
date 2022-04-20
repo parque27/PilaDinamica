@@ -18,5 +18,19 @@
     <ClCompile Include="PilaDinamica.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Fitxa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PilaFitxes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fitxa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PilaFitxes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
