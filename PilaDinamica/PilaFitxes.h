@@ -17,6 +17,7 @@ class PilaFitxes
 		// METODES CONSULTORS
 		bool es_buida() const;
 		Fitxa cim() const;
+		void mostra() const;
 
 		// METODES MODIFICADORS
 		void empila(Fitxa f);

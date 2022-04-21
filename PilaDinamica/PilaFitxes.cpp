@@ -41,6 +41,18 @@ Fitxa PilaFitxes::cim() const
 	return a_cim->f;
 }
 
+void PilaFitxes::mostra() const
+{
+	Node* p = new Node;
+	p = a_cim;
+	while (p != NULL)
+	{
+		p->f.mostra(); cout << "   ";
+		p = p->seg;
+	}
+	delete p;
+	cout << endl; // ESTETICA
+}
 // METODES MODIFICADRS
 void PilaFitxes::empila(Fitxa fitxa)
 {
