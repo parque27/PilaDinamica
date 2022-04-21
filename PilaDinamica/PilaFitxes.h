@@ -7,13 +7,17 @@ class PilaFitxes
 		// CONSTRUCTORS
 		PilaFitxes();
 		PilaFitxes(const PilaFitxes& o);
+
 		// DESTRUCTOR
 		~PilaFitxes();
+
 		// OPERADORS
 		PilaFitxes& operator=(const PilaFitxes& o);
+
 		// METODES CONSULTORS
 		bool es_buida() const;
 		Fitxa cim() const;
+
 		// METODES MODIFICADORS
 		void empila(Fitxa f);
 		void desempila();
@@ -25,6 +29,7 @@ class PilaFitxes
 			Fitxa f;
 			Node* seg;
 		};
+
 		// ATRIBUTS
 		Node* a_cim;
 

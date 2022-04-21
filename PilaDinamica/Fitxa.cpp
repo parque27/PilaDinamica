@@ -25,9 +25,13 @@ bool Fitxa::operator<(const Fitxa& f)
 // METODES CONSULTORS
 void Fitxa::mostra() const
 {
-	cout << "(" << a_tipus;
-	if (a_valor <= 9) cout << 0;
-	cout << a_valor << ")";
+	if (this->es_nula()) cout << "(   )" << endl;
+	else
+	{
+		cout << "(" << a_tipus;
+		if (a_valor <= 9) cout << 0;
+		cout << a_valor << ")";
+	}
 }
 bool Fitxa::es_nula() const
 {
