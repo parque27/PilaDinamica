@@ -3,9 +3,8 @@
 #include "Fitxa.h"
 class PilaFitxes
 {
-	// DESCRIPCCIO:
+	// DESCRIPCCIO: Una pila dinamica de fitxes
 	// INVARIABLE:
-
 	public:
 		// CONSTRUCTORS
 		PilaFitxes();
