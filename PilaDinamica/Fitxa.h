@@ -14,6 +14,8 @@ public:
 	// METODES CONSULTORS
 	void mostra() const;
 	// Pre: --: Post: mostra la fitxa per pantalla
+	bool es_nula() const;
+	// Pre: --; Post: retorna true si la fitxa es nula, fals altrament
 	
 	// METODES MODIFICADORS
 	void llegeix();

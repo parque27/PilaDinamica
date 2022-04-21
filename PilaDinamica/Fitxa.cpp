@@ -23,6 +23,10 @@ void Fitxa::mostra() const
 	if (a_valor <= 9) cout << 0;
 	cout << a_valor << ")";
 }
+bool Fitxa::es_nula() const
+{
+	return a_tipus == ' ' and a_valor == 0;
+}
 // METODES MODIFICADORS
 void Fitxa::llegeix()
 {
