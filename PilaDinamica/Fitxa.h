@@ -4,6 +4,7 @@ class Fitxa
 {
 	// DESCRIPCCIO: Fitxa que te un element (aigua, foc, terra, vent i eter) i un valor.
 	// INVARIABLE: Fitxa pren valors de 1 a 20. Caracters que pot ser una fitxa: a,f,t,v,e
+	
 	public:
 		// CONSTRUCTORS
 		Fitxa();
