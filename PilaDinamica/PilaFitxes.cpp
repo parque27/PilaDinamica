@@ -38,7 +38,8 @@ bool PilaFitxes::es_buida() const
 
 Fitxa PilaFitxes::cim() const
 {
-	return a_cim->f;
+	if (es_buida()) cout << "NO HI HA CAP FITXA" << endl;
+	else return a_cim->f;
 }
 
 // METODES MODIFICADRS
@@ -52,9 +53,13 @@ void PilaFitxes::empila(Fitxa fitxa)
 
 void PilaFitxes::desempila()
 {
-	Node* aux = a_cim;
-	a_cim = a_cim->seg;
-	delete aux;
+	if (es_buida()) cout << "NO HI HA CAP FITXA" << endl;
+	else
+	{
+		Node* aux = a_cim;
+		a_cim = a_cim->seg;
+		delete aux;
+	}
 }
 
 // METODES D'INSTANCIA
