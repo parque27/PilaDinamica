@@ -10,12 +10,15 @@ public:
 	// Pre: --; Post: la fitxa te tipus buit i valor 0
 	Fitxa(char tipus, int valor);
 	// Pre: --; Post: la fitxa te els parametres passats per constructor
+	// OPERADORS
+	bool operator < (const Fitxa& f);
 
 	// METODES CONSULTORS
 	void mostra() const;
 	// Pre: --: Post: mostra la fitxa per pantalla
 	bool es_nula() const;
 	// Pre: --; Post: retorna true si la fitxa es nula, fals altrament
+
 	
 	// METODES MODIFICADORS
 	void llegeix();
