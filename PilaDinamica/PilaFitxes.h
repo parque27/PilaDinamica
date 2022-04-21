@@ -3,26 +3,33 @@
 #include "Fitxa.h"
 class PilaFitxes
 {
-public:
-	PilaFitxes();
-	PilaFitxes(const PilaFitxes& o);
-	~PilaFitxes();
-	PilaFitxes& operator=(const PilaFitxes& o);
+	public:
+		// CONSTRUCTORS
+		PilaFitxes();
+		PilaFitxes(const PilaFitxes& o);
+		// DESTRUCTOR
+		~PilaFitxes();
+		// OPERADORS
+		PilaFitxes& operator=(const PilaFitxes& o);
+		// METODES CONSULTORS
+		bool es_buida() const;
+		Fitxa cim() const;
+		// METODES MODIFICADORS
+		void empila(Fitxa f);
+		void desempila();
 
-	bool es_buida() const;
-	Fitxa cim() const;
+	private:
+		// ESTRUCTURA DE DADES
+		struct Node
+		{
+			Fitxa f;
+			Node* seg;
+		};
+		// ATRIBUTS
+		Node* a_cim;
 
-	void empila(Fitxa f);
-	void desempila();
-private:
-	struct Node
-	{
-		Fitxa f;
-		Node* seg;
-	};
-	Node* a_cim;
-
-	void copia(const PilaFitxes& o);
-	void allibera();
+		// METODES D'INSTANCIA
+		void copia(const PilaFitxes& o);
+		void allibera();
 };
 #endif // !PILAFITXES_H
