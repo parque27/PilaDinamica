@@ -3,6 +3,7 @@
 #include <iostream>
 #include "PilaFitxes.h"
 using namespace std;
+
 int introduir_opcio()
 {
 	cout << "Introdueix opcio: ";
@@ -18,6 +19,16 @@ void empila(PilaFitxes& p)
 {
 	Fitxa f; f.llegeix();
 	p.empila(f);
+}
+void desempila(PilaFitxes& p)
+{
+	if (p.es_buida()) cout << "NO HI HA CAP FITXA" << endl;
+	else p.desempila();
+}
+void mostra_cim(PilaFitxes& p)
+{
+	if (p.es_buida()) cout << "NO HI HA CAP FITXA" << endl;
+	else p.cim().mostra();
 }
 void mostrar_menu()
 {
@@ -36,12 +47,8 @@ int main()
 	while (opcio != 5)
 	{
 		if (opcio == 1) empila(p);
-		else if (opcio == 2) p.desempila();
-		else if (opcio == 3)
-		{
-			p.cim().mostra();
-			cout << endl; // ESTETICA
-		}
+		else if (opcio == 2) desempila(p);
+		else if (opcio == 3) mostra_cim(p);
 		else if (opcio == 4) mostrar_menu();
 
 		opcio = introduir_opcio();
